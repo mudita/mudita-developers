@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "App'n'roll Developers Guide",
   "scripts": {
-    "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "develop": "docz dev",
+    "build": "docz build"
   },
   "keywords": [],
   "author": "@appnroll",
