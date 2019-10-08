@@ -1,0 +1,16 @@
+{
+  "name": "appnroll-developers",
+  "version": "1.0.0",
+  "description": "App'n'roll Developers Guide",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "keywords": [],
+  "author": "@appnroll",
+  "dependencies": {
+    "docz": "^2.0.0-rc.53",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
