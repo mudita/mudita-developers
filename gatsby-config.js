@@ -16,8 +16,8 @@ const siteUrl = netlifyProduction
 
 module.exports = {
   siteMetadata: {
-    title: `App'n'roll Starter`,
-    description: `Application made by App'n'roll`,
+    title: `App'n'roll Developers`,
+    description: `Developers App'n'roll`,
     author: `@appnroll`,
     siteUrl,
   },

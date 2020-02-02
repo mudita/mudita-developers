@@ -13,6 +13,12 @@ import theme from "../theming/theme"
 import Footer from "./base/footer/footer.component"
 import Header from "./base/header/header.component"
 
+const AppWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
+
 const ContentWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
@@ -32,14 +38,14 @@ const Layout = ({ children }: { children: ReactChild | ReactChild[] }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <AppWrapper>
         <Normalize />
         <Header siteTitle={data.site.siteMetadata.title} />
         <ContentWrapper>
           <main>{children}</main>
-          <Footer />
         </ContentWrapper>
-      </>
+        <Footer />
+      </AppWrapper>
     </ThemeProvider>
   )
 }
