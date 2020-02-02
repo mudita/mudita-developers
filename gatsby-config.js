@@ -39,7 +39,22 @@ module.exports = {
         path: `${__dirname}/src/styleguide`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: {
+                ts: "typescript",
+                js: "javascript",
+              },
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
