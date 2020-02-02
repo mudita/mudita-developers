@@ -1,17 +1,12 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import { graphql, useStaticQuery } from "gatsby"
-import React, { ReactChild } from "react"
+import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import { Normalize } from "styled-normalize"
 import theme from "../theming/theme"
+import AppFunctionComponent from "../types/app-function-component.interface"
 import Footer from "./base/footer/footer.component"
 import Header from "./base/header/header.component"
+import GlobalStyle from "./global-style.component"
 
 const AppWrapper = styled.div`
   min-height: 100vh;
@@ -19,13 +14,7 @@ const AppWrapper = styled.div`
   flex-direction: column;
 `
 
-const ContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
-`
-
-const Layout = ({ children }: { children: ReactChild | ReactChild[] }) => {
+const Layout: AppFunctionComponent = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -40,10 +29,9 @@ const Layout = ({ children }: { children: ReactChild | ReactChild[] }) => {
     <ThemeProvider theme={theme}>
       <AppWrapper>
         <Normalize />
+        <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <ContentWrapper>
-          <main>{children}</main>
-        </ContentWrapper>
+        <main>{children}</main>
         <Footer />
       </AppWrapper>
     </ThemeProvider>
