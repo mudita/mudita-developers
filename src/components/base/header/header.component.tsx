@@ -4,21 +4,24 @@ import styled from "styled-components"
 import AppFunctionComponent from "../../../types/app-function-component.interface"
 import AppnrollLogo from "../../../images/appnroll-logo.svg"
 
-const HeaderRoot = styled.header`
-  border-bottom: 1px solid red;
-`
-
 const ContentWrapper = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `
 
 const Title = styled.h1`
   display: flex;
   align-items: center;
+  font-size: 1rem;
+`
+
+const TitleLink = styled(Link)`
+  color: black;
+  text-decoration: none;
 `
 
 const Logo = styled(AppnrollLogo)`
@@ -26,7 +29,7 @@ const Logo = styled(AppnrollLogo)`
 `
 
 const NavigationList = styled.ul`
-  margin: 0 0 0 2rem;
+  margin-left: 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -36,8 +39,17 @@ const NavigationItem = styled.li`
   margin-right: 1rem;
 `
 
+const NavigationLink = styled(Link)`
+  color: red;
+  text-decoration: none;
+`
+
 const LoginButton = styled.button`
-  margin-left: auto;
+  padding: 1rem;
+  border: none;
+  background-color: red;
+  line-height: 1;
+  color: #fff;
 `
 
 interface Props {
@@ -46,36 +58,39 @@ interface Props {
 
 const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
   return (
-    <HeaderRoot>
+    <header>
       <ContentWrapper>
-        <Link to="/">
+        <TitleLink to="/">
           <Title>
             <Logo />
             <span>{siteTitle}</span>
           </Title>
-        </Link>
+        </TitleLink>
         <nav>
           <NavigationList>
             <NavigationItem>
-              <Link to="/blog">Blog</Link>
+              <NavigationLink to="/blog">Blog</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <Link to="/devs">Developers</Link>
+              <NavigationLink to="/devs">Developers</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <Link to="/technologies">Technologies</Link>
+              <NavigationLink to="/technologies">Technologies</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <Link to="/guide">Guide</Link>
+              <NavigationLink to="/code-guide">Code Styleguide</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <Link to="/resources">resources</Link>
+              <NavigationLink to="/guide">Guide</NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink to="/resources">Resources</NavigationLink>
             </NavigationItem>
           </NavigationList>
         </nav>
         <LoginButton>Login</LoginButton>
       </ContentWrapper>
-    </HeaderRoot>
+    </header>
   )
 }
 
