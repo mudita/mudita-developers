@@ -1,0 +1,22 @@
+---
+title: Styling components
+---
+
+Don't export styled components unnecessarily.
+
+If you need them in multiple files, then maybe you need a separate file for that component.
+
+
+```typescript
+const HeaderRoot = styled.header`
+  background: red
+`
+
+const Header: AppFunctionComponent = () => {
+  return (
+    <HeaderRoot>App'n'roll</HeaderRoot>
+  )
+}
+
+export default Header
+```

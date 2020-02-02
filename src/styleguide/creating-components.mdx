@@ -1,0 +1,24 @@
+---
+title: Creating components
+---
+
+Use `AppFunctionComponent`.
+Prefer functional components with hooks.
+named default export
+
+```typescript
+interface Props {
+  propA: string
+  propB?: number
+}
+
+const MyComponent: AppFunctionComponent<Props> = ({propA, propB = 42}) => {
+  return (
+    <div>
+      {propsA}: {propB}
+    </div>
+  )
+}
+
+export default MyComponent
+```
