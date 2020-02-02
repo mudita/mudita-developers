@@ -40,8 +40,33 @@ const NavigationItem = styled.li`
 `
 
 const NavigationLink = styled(Link)`
+  position: relative;
   color: red;
   text-decoration: none;
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: calc(100% + 10px);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-top: 10px solid #f00;
+  }
+
+  &.active::before,
+  &:hover::before {
+    opacity: 1;
+  }
 `
 
 const LoginButton = styled.button`
@@ -69,22 +94,34 @@ const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
         <nav>
           <NavigationList>
             <NavigationItem>
-              <NavigationLink to="/blog">Blog</NavigationLink>
+              <NavigationLink to="/blog" activeClassName="active">
+                Blog
+              </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/devs">Developers</NavigationLink>
+              <NavigationLink to="/devs" activeClassName="active">
+                Developers
+              </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/technologies">Technologies</NavigationLink>
+              <NavigationLink to="/technologies" activeClassName="active">
+                Technologies
+              </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/code-guide">Code Styleguide</NavigationLink>
+              <NavigationLink to="/code-guide" activeClassName="active">
+                Code Styleguide
+              </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/guide">Guide</NavigationLink>
+              <NavigationLink to="/guide" activeClassName="active">
+                Guide
+              </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/resources">Resources</NavigationLink>
+              <NavigationLink to="/resources" activeClassName="active">
+                Resources
+              </NavigationLink>
             </NavigationItem>
           </NavigationList>
         </nav>
