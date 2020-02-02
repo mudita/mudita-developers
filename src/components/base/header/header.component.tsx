@@ -99,7 +99,7 @@ const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/devs" activeClassName="active">
+              <NavigationLink to="/developers" activeClassName="active">
                 Developers
               </NavigationLink>
             </NavigationItem>
@@ -109,7 +109,7 @@ const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/code-guide" activeClassName="active">
+              <NavigationLink to="/styleguide" activeClassName="active">
                 Code Styleguide
               </NavigationLink>
             </NavigationItem>
