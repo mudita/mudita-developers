@@ -43,6 +43,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
+          `gatsby-remark-heading-slug`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
