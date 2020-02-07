@@ -1,12 +1,49 @@
-# Naming files
+# Files and modules organisation
+## Files naming convention
 
-Name your files using __convention__ ...
+When naming files, you need to remember about few things.
+- Use the kebab case convention so the filename will look like it's a part of the URL. We're web devs after all.
+- Usually add a file type suffix informing what type of file it is (e.g `.component`). That way it'll be easier to find
+  the file you need.
+- Name the file the same as the main (default) export.
 
+The available file type suffixes (list is non-exhaustive):
+- `.component` for React components,
+- `.stories` for files holding Storybook stories,
+- `.test` for unit tests,
+- `.e2e` for end-to-end tests,
+- `.fragment` for GraphQL fragments,
+- `.interface` for interfaces,
+- `.request` for modules exposing an HTTP request.
+
+There are some modules that doesn't need that suffix. It usually happen when the filename is important (like in the
+`/pages` folder in Gatsby projects) or the exported value is a function (then `.function` suffix would be redundant, as
+the module name alone would inform it's a function, eg. `get-some-data.ts`).
+
+### Examples
+
+```ts
+contact-form.component.tsx
+contact-form-component.stories.tsx
+contact-form-component.test.tsx
+contact-form-component.e2e.tsx
+user-profile.fragment.ts
+user-profile.interface.ts
+get-user-profile.request.ts
+parse-user-profile.ts
 ```
-file-name.component.tsx
-```
 
-# Creating components
+## Folders structure and files organisation
+
+# Style
+
+- 80 columns
+- no semicolons
+- ...
+
+# Code
+
+## Creating components
 
 Use `AppFunctionComponent`.
 Prefer functional components with hooks.
@@ -29,7 +66,7 @@ const MyComponent: AppFunctionComponent<Props> = ({propA, propB = 42}) => {
 export default MyComponent
 ```
 
-# Styling components
+## Styling components
 
 Don't export styled components unnecessarily.
 
@@ -49,3 +86,11 @@ const Header: AppFunctionComponent = () => {
 
 export default Header
 ```
+
+## Smart adn dumb
+
+contact-form & contact-form-ui
+
+# Tests
+
+# Stories
