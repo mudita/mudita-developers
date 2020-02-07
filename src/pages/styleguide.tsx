@@ -6,6 +6,7 @@ import PageTitle from "../components/base/page-title/page-title.component"
 import StyleguideTableOfContentsItem from "../components/base/styleguide-table-of-contents/styleguide-table-of-contents-item.interface"
 import StyleguideTableOfContents from "../components/base/styleguide-table-of-contents/styleguide-table-of-contents.component"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import AppFunctionComponent from "../types/app-function-component.interface"
 
 interface Props {
@@ -29,6 +30,7 @@ const StyleGuidePage: AppFunctionComponent<Props> = ({
 }) => {
   return (
     <Layout>
+      <SEO title="Code Styleguide" />
       <PageTitle>Code Styleguide</PageTitle>
       <LayoutBlock>
         <StyleguideTableOfContents items={tocItems} />
