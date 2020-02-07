@@ -1,0 +1,51 @@
+# Naming files
+
+Name your files using __convention__ ...
+
+```
+file-name.component.tsx
+```
+
+# Creating components
+
+Use `AppFunctionComponent`.
+Prefer functional components with hooks.
+named default export
+
+```typescript
+interface Props {
+  propA: string
+  propB?: number
+}
+
+const MyComponent: AppFunctionComponent<Props> = ({propA, propB = 42}) => {
+  return (
+    <div>
+      {propsA}: {propB}
+    </div>
+  )
+}
+
+export default MyComponent
+```
+
+# Styling components
+
+Don't export styled components unnecessarily.
+
+If you need them in multiple files, then maybe you need a separate file for that component.
+
+
+```typescript
+const HeaderRoot = styled.header`
+  background: red
+`
+
+const Header: AppFunctionComponent = () => {
+  return (
+    <HeaderRoot>App'n'roll</HeaderRoot>
+  )
+}
+
+export default Header
+```
