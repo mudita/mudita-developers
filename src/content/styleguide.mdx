@@ -7,6 +7,7 @@ stuff that's not included is hidden in automatic tools configuration. Most of th
 with some notable exceptions you'll find reading this guide.
 
 # Files and modules organisation
+
 ## Files naming convention
 
 When naming files, you need to remember about few things.
@@ -53,25 +54,85 @@ parse-user-profile.ts
 
 ## Creating components
 
-Use `AppFunctionComponent`.
-Prefer functional components with hooks.
-named default export
+Prefer function components over class components for the smaller code-print. Use the `AppFunctionComponent` interface
+to type the component. Declare it as a constant and then export that constant as a default export of the module. Keep
+only a single component in a file (with an exception of styled components that makes up the main component).
+
+### Example
 
 ```typescript
-interface Props {
-  propA: string
-  propB?: number
-}
-
-const MyComponent: AppFunctionComponent<Props> = ({propA, propB = 42}) => {
-  return (
-    <div>
-      {propsA}: {propB}
-    </div>
-  )
+const MyComponent: AppFunctionComponent<Props> = () => {
+  return <div />
 }
 
 export default MyComponent
+```
+
+## Component's properties
+
+Declare the component's properties as the `Props` interface and use it in the AppFunctionComponent generic type.
+Destructure the properties in the parameters declaration and provide default values for optional properties there
+(if it makes sense for a prop to have a default).
+
+### Example
+
+```typescript
+interface Props {
+  property: string
+  optionalProperty?: number
+}
+
+const MyComponent: AppFunctionComponent<Props> = ({ property, optionalProperty = 42 }) => {
+  return (
+    <div>
+      {property}: {optionalProperty}
+    </div>
+  )
+}
+```
+
+## Don't use arrow return
+
+Prefer braces in the component, rather than arrow return to avoid potentially massive and unrelated diffs when
+component will require more stuff in the body later in the game.
+
+### Example
+
+```typescript
+// Good.
+const MyComponent: AppFunctionComponent = () => {
+  return <div />
+}
+
+// Bad. Will create a big diff when changed.
+const MyComponent: AppFunctionComponent = () => <div />
+```
+
+## Hooks
+
+## AppFunctionComponent and its extensions
+
+`AppFunctionComponent` interface is a basic component type in all of our applications. On top of extending the React's
+`FunctionComponent` it provides two additional benefits:
+
+- it makes all the properties on the root lever `readonly` to prevent their accidental modification,
+- it adds `className: string` property so that all components will be easily stylable.
+
+When the app have some other specific properties that all components can use, then extend the `AppFunctionComponent`
+rather than creating a new name variant to avoid confusion for developers working on other apps.
+
+```typescript
+// Base AppFunctionComponent
+interface AppFunctionComponent<P = {}>
+  extends FunctionComponent<Readonly<P & { className?: string }>> {}
+
+// Extended interface
+interface IntlProps {
+  intl: (label: string) => string
+}
+
+interface AppFunctionComponent<P = {}>
+  extends FunctionComponent<Readonly<P & { className?: string } & IntlProps>> {}
 ```
 
 ## Styling components
