@@ -44,6 +44,23 @@ parse-user-profile.ts
 
 ## Folders structure and files organisation
 
+Keep the related files in one catalogue for ease of finding the relation and working on a single module.
+
+### Examples
+
+```typescript
+├── button
+│   ├── button.component.tsx
+│   ├── button-component.test.tsx
+│   ├── button-component.stories.tsx
+│   └── button-content.interface.ts
+```
+
+## Avoid index files
+
+Do not create `index` files that reexport values from files inside a catalogue. They add unnecessary work that needs to
+be done and checked for correctness, as well as it needs to be kept in sync in case new exports will show up.
+
 # Style
 
 - 80 columns
@@ -172,9 +189,17 @@ request in code review if the type was not that complex.
 
 # Tests
 
-## filename convention
+## Test filenames convention
 
-.test.ts, e2e.ts
+For unit tests use the `.test.ts(x)` suffix and for end-to-end tests use `.e2e.ts(x)`. That way they'll be easy
+to find in the component's catalogue.
+
+### Examples
+
+```typescript
+button.test.tsx
+checkout.e2e.tsx
+```
 
 ## writing tests
 
