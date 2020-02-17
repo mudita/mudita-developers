@@ -48,6 +48,8 @@ parse-user-profile.ts
 
 - 80 columns
 - no semicolons
+- double quotes,
+- two spaces,
 - ...
 
 # Code
@@ -160,6 +162,14 @@ export default Header
 
 contact-form & contact-form-ui
 
+## Avoid `any`
+
+But not at any cost. Try to figure out the expected type of a value and type it properly so that you and your fellow
+programmers will get the benefit of type safety and IDE support.
+
+In rare cases, when type is difficult to use, you can use an explicit `any`. But keep in mind you might get a change
+request in code review if the type was not that complex.
+
 # Tests
 
 ## filename convention
@@ -169,5 +179,82 @@ contact-form & contact-form-ui
 ## writing tests
 
 on root, test("x works"), no "should"
+
+## Use `test`
+
+When declaring a test use the `test` function (instead of `it`). It nicely feet into tests (it's a `test` after all).
+
+### Examples
+
+```typescript
+// Good.
+test("writes good tests", () => ...)
+
+// Bad. (Well, not really, but still…)
+it("doesn't write good tests", () => ...)
+```
+
+## You should not `should`
+
+Keep tests simple. "Works" is enough. We know it should.
+
+### Examples
+
+```typescript
+// Good.
+test("works when clicked", () => ...)
+
+// Bad.
+test("should work when clicked", () => ...)
+```
+
+## Expose custom getters in the renderer when necessary
+
+### Examples
+
+```typescript
+const renderMyComponent = () => {
+  const outcome = render(<MyComponent />)
+  return {
+    ...outcome,
+    getButton: () => outcome.getByRole("button")
+  }
+}
+
+test("clicking a button does something", () => {
+  const { getButton } = renderMyComponent()
+  // ...
+})
+```
+
+## Use arrow function as a callback
+
+Use only arrow functions in the test's callback. Don't use function expression or a reference.
+
+### Examples
+
+```typescript
+// Good.
+test("with good callback", () => ...)
+
+// Bad.
+test("with bad callback", function() { ... })
+```
+
+## Don't use root level `describe`
+
+The module's name is enough to find a test and know what it is.
+
+### Examples
+
+```typescript
+// Bad.
+describe("MyComponent test", () => {
+  test("", () => ...)
+})
+
+// Good. (Just test.)
+test("", () => ...)
+```
 
 # Stories
