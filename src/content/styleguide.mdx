@@ -69,6 +69,41 @@ be done and checked for correctness, as well as it needs to be kept in sync in c
 - two spaces,
 - ...
 
+## Use verbs for functions
+
+Whenever creating a function, prefix it with an actionable verb so that it's obvious for anyone using that value
+that it needs to be called. It's also easier to understand the effect of calling cuch
+
+### Examples
+
+```typescript
+// Good.
+const isActive = something => something.active // => true
+const activate = something => something.active = true
+
+// Bad.
+const openHandler = () => ... // Obvious where to use but not obvious what will happen.
+const activator = () => ... // Not obvious what will happen.
+```
+
+## Use adjectives for boolean values
+
+Use adjectives or similar form for boolean values. Do not use the `is` prefix for non-functional values. Try to keep
+it similar to what HTML does (active, disabled, etc.).
+
+### Examples
+
+```typescript
+// Good.
+const open = true
+const selected = false
+const inTransition = true
+
+// Bad.
+const isOpen = true
+const selection = false
+```
+
 # Code
 
 ## Creating components
