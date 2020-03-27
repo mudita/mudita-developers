@@ -106,6 +106,34 @@ const selection = false
 
 # Code
 
+## Component's module structure
+
+Keep all important pieces that create a full component definition in one place. Splitting those parts in separate
+files brings chaos and makes it harder to understand the full functionality at a glance. You'd have to keep multiple
+files open and manage the tabs clutter to work on a single piece of code.
+
+### Example
+
+```
+/* Good. Everything in one place. */
+interface MyComponentProps {
+  hello: string
+}
+const Component: AppFunctionComponent<MyComponentProps> = () => { ... }
+export default Component
+
+/* Bad. Have to keep an eye at multiple files. */
+
+// my-component.interface.ts
+interface MyComponentProps {
+  hello: string
+}
+
+// my-component.component.ts
+const Component: AppFunctionComponent<MyComponentProps> = () => { ... }
+export default Component
+```
+
 ## Creating components
 
 Prefer function components over class components for the smaller code-print. Use the `AppFunctionComponent` interface
