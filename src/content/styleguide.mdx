@@ -121,6 +121,27 @@ const booleanValue = Boolean("hello")
 const supposedlyBooleanValue = !!"hello"
 ```
 
+## Use screaming case for global constants
+
+When you expose some constant values globally in the app (either by exporting it or using it as a static class property),
+use the SCREAMING_CASE to inform consumers that value is not a part of the module and is not meant to be changed by
+code. Immutability should be ensured within a reason. The convention is native to JavaScript.
+
+### Examples
+
+```typescript
+// Basic configuration value.
+export const COMMENTS_COUNT = 10
+
+// Component allowing to access its default config.
+export class Slider {
+  public static readonly DEFAULT_COUNT = 5
+}
+
+// Native object's global value.
+Number.MAX_SAFE_INTEGER
+```
+
 # Code
 
 ## Component's module structure
