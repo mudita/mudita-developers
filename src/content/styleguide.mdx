@@ -105,6 +105,22 @@ const isOpen = true
 const selection = false
 ```
 
+## Avoid !! ("double bang")
+
+It's an obscure way of converting a value to a boolean. It's easily mistaken with a plain negation and requires
+more mental capacity to properly understand. Prefer simple and explicit `Boolean(value)` or don't convert at all
+as it's usually not required.
+
+### Examples
+
+```typescript
+// Good.
+const booleanValue = Boolean("hello")
+
+// Bad.
+const supposedlyBooleanValue = !!"hello"
+```
+
 # Code
 
 ## Component's module structure
