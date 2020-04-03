@@ -26,10 +26,10 @@ What you should do:
 ## PR status - didn’t finish? Create a draft PR
 Remember to push your code everyday. It’s not only for emergency cases, but also needed to show your daily progress.
 That’s why you will need a draft PR. We are using it to create a PR „work in progress” - to show somebody a code or a deploy preview.
-(tu screen gdzie znaleźć opcję draft)
+![Create draft PR](/images/code-review-guide/create-draft-pr.png)
 
 When the code is ready, click a „Ready for review” button.
-(tu screen z buttonem)
+![Ready for review](/images/code-review-guide/ready-for-review.png)
 
 ## Reviewers
 When you’re finally ready for a code review it’s time to add reviewers. The best way to do it is to add them in the „Reviewers” field in PR, but it should be made automatically with project configuration in .github/auto_assign.yml file.
@@ -99,25 +99,25 @@ Remember about a team goal :)
 It depends on the mentioned issue, but the general rule is: you can, but you don’t have to. If a reviewer found a bug in your code, then you should fix it. If somebody requests a change, which seems not good enough for you, you can ask for argumentation or give some different point of view. A reviewer can make a mistake the same as a code author, so try to do a substantive discussion. Feel free to challenge the reviewer's opinion and present your point .
 
 
-### Fixes
+## Fixes
 If you agree with a mentioned issue and you want to fix it, remember to make it easy to verify.
 
 
-#### Commit per fix
+### Commit per fix
 It’s not good to implement all fixes and commit them in a one commit named “CR fixes”, because it’s hard for the reviewer to verify all of them together and it’s not consistent with committing rules.
 E.g. if somebody requests to fix a typo in your function name, then fix it and commit as “Typo of function name fixed” (or something similar).
 
 
-#### Links to fixes in threads
+### Links to fixes in threads
 Name of the commit could be not enough. Imagine 50 fixes to your code and a reviewer trying to find a commit related to a comment while verifying it’s resolved or not. It will be easier for a reviewer to have a link to a commit with a related fix in a thread. It will be helpful for you too, because you will see what you fixed and what you didn’t yet.
 
 
-#### Request a re-review
+### Request a re-review
 If all fixes are done remember to request a re-review from a reviewer. You should do it the same way as requesting a review for the first time.
-(screen z kólkiem)
+![Request a re-review](/images/code-review-guide/request-re-review.png)
 
 
-#### Resolving conversation
+### Resolving conversation
 “Resolve conversation” button should be clicked by the comment author after reaching a conclusion about the discussed topic (e.g. when an expected fix is applied or there is a convincing con-argument).
 
 # FAQ
@@ -126,7 +126,7 @@ If all fixes are done remember to request a re-review from a reviewer. You shoul
 We usually don’t use labels, because all labels stuff we are organising with currently available tools:
 „work in progress” - draft PR
 „blocked” - changes requested / draft PR / description
-„ready for CR” - request somebody a CR with (znaczek kręcących się strzałek)
+„ready for CR” - request somebody a CR with ![Re-review](/images/code-review-guide/re-review-icon.png)
 „in QA” - can be marked in self checks
 
 
