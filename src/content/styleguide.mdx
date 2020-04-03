@@ -101,10 +101,12 @@ that it needs to be called. It's also easier to understand the effect of calling
 // Good.
 const isActive = something => something.active // => true
 const activate = something => something.active = true
+const greet = () => alert("hello!")
 
 // Bad.
 const openHandler = () => ... // Obvious where to use but not obvious what will happen.
 const activator = () => ... // Not obvious what will happen.
+const onClick = () => alert("hello!")
 ```
 
 ## Use adjectives for boolean values
