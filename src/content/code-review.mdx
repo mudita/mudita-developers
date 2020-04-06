@@ -13,6 +13,7 @@ Please don’t:
 
 ## Description - describe short&well
 Each PR should contain a short description. It should be written briefly and mention about important changes which were implemented in your PR. All important things should be included, e.g. specific problems fixed by controversial code. It’s needed to avoid unnecessary questions while CR and by this way to shorten the whole process.
+
 In our PR template you should also do some “self checks” which helps you to include all of the helpful information for reviewers. See the next section for more details about it.
 
 ## Self checks
@@ -25,6 +26,7 @@ What you should do:
 
 ## PR status - didn’t finish? Create a draft PR
 Remember to push your code everyday. It’s not only for emergency cases, but also needed to show your daily progress.
+
 That’s why you will need a draft PR. We are using it to create a PR „work in progress” - to show somebody a code or a deploy preview.
 ![Create draft PR](/images/code-review-guide/create-draft-pr.png)
 
@@ -41,11 +43,15 @@ When you’re a reviewer, you should get a notification about somebody requestin
 
 ## Branch - how to name it?
 Your branch should always be created with a similar convention as previously mentioned.
+
 The best will be XX-YYY-lorem-ipsum-dolor, where XX-YYY is a task ID and the rest is a few words about part of code inside
 E.g. MEC-100-error-ui, ABC-123-modal-component, MEC-001-project-init.
 If it’s more convenient for you, it’s also good to use lowercase branches.
+
 Why is it important?
+
 JIRA will automatically connect your branch to a task, if you will use a task ID in the branch name. This way it’s visible for everyone that there is a code connected to this task or not.
+
 The second reason is the list of branches. When you’re trying to find some code, branches named „test” or „asdadsdasdf” tell you nothing and you don’t know it’s a branch ready to remove, or it’s something you are looking for. Also an alone task ID is hard to “understand”, so that’s why a hybrid of task ID and some meaningful words are recommended.
 
 
@@ -54,7 +60,9 @@ Try to commit your changes in small parts. It’s hard when we are focused on ma
 The general rule is to commit „one thing” per commit described in a meaningful way.
 
 Examples:
+
 DO: „tests for input component”, „select added to storybook”, „modal - UI component”, „link formatting helper added”
+
 DON’T: „fixes”, „CR fixes”, „link” - they are not meaningful, „general UI components” - sounds like there are many things inside like a few components
 
 
@@ -75,6 +83,7 @@ If your PR is in the code review process it’s not good to force-push on it. Re
 If you’re creating a PR (not a draft), then reviewers are usually requested automatically by the project’s configuration (.github/auto_assign.yml file). If not - add reviewers in the “Reviewers” section.
 
 What is not a request for a review:
+
 Comment with a mention of somebody - It doesn’t mean you can’t mention a reviewer in a comment. You can do it, if you want to ensure they will read something or you just want an answer for a question you asked. It means the mention is not a “review request”, so the reviewer knows he/she doesn’t have to spend time reviewing your code once again. He/she will focus only on pointed things.
 
 
@@ -85,6 +94,7 @@ Don’t always request the same person if it’s not necessary. Remember that co
 
 ### How long?
 If you were requested for a review, remember it’s your responsibility. It’s not a kindness from you to review somebody’s code. You are obligated to do it within 24h.
+
 It has the same level of importance as the tasks you’re working on, as the review is required for other people’s tasks to become successfully completed.
 Remember about a team goal :)
 
@@ -124,18 +134,21 @@ If all fixes are done remember to request a re-review from a reviewer. You shoul
 
 ## Labels - should I use them?
 We usually don’t use labels, because all labels stuff we are organising with currently available tools:
-„work in progress” - draft PR
-„blocked” - changes requested / draft PR / description
-„ready for CR” - request somebody a CR with ![Re-review](/images/code-review-guide/re-review-icon.png)
-„in QA” - can be marked in self checks
+- „work in progress” - draft PR
+- „blocked” - changes requested / draft PR / description
+- „ready for CR” - request somebody a CR with ![Re-review](/images/code-review-guide/re-review-icon.png)
+- „in QA” - can be marked in self checks
 
 
 ## What is more important - preparing a new PR or code reviewing?
 It’s really important to remember the priority of finishing open PRs. The main motivation is making tasks “DONE”. You should always try to do re-reviews for the first, because they are usually faster than doing a review of a new code. If there are new PRs on the list, it’s better to review them before adding the next ones.
+
 Priority is based on a task status and is comparably high as its status. Just remember to focus on these tasks which are the closest to the “done” status.
+
 That’s why the code review has higher priority than preparing a new PR. Remember that 24h is a maximum limit of time. It doesn’t mean you can always do a review after 23h.
 
 ## Should I use “code suggestions”?
 If it’s helpful for you - yes, you should. In some cases it’s easier to add a strict code suggestion than writing a comment with a change proposition. The main advantage of this way is less time spent on committing a fix by an author, because the only thing to do is a click on a button.
+
 :warning: The committed suggestion should be always validated if it doesn’t cause any issue, (e.g. fails of type checking). Take care of that.
 
