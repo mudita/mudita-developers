@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import PageTitle from "../../components/base/page-title/page-title.component"
 import Layout from "../../components/layout"
@@ -9,6 +10,7 @@ const GuidePage: AppFunctionComponent = () => {
     <Layout>
       <SEO title="Guide" />
       <PageTitle>Guide</PageTitle>
+      <Link to={"/guide/code-review"}>Code Review and Pull Requests Guide</Link>
     </Layout>
   )
 }
