@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import AppFunctionComponent from "../../../types/app-function-component.interface"
-import AppnrollLogo from "../../../images/appnroll-logo.svg"
+import AppnrollLogo from "../../../images/appnroll-logotype.svg"
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
@@ -20,8 +20,14 @@ const Title = styled.h1`
 `
 
 const TitleLink = styled(Link)`
-  color: black;
   text-decoration: none;
+`
+
+const Subtitle = styled.span`
+  margin-top: 9px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  color: black;
 `
 
 const Logo = styled(AppnrollLogo)`
@@ -69,26 +75,14 @@ const NavigationLink = styled(Link).attrs({ activeClassName: "active" })`
   }
 `
 
-const LoginButton = styled.button`
-  padding: 1rem;
-  border: none;
-  background-color: red;
-  line-height: 1;
-  color: #fff;
-`
-
-interface Props {
-  siteTitle: string
-}
-
-const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
+const Header: AppFunctionComponent = () => {
   return (
     <header>
       <ContentWrapper>
         <TitleLink to="/">
           <Title>
             <Logo />
-            <span>{siteTitle}</span>
+            <Subtitle>Developers</Subtitle>
           </Title>
         </TitleLink>
         <nav>
@@ -101,7 +95,6 @@ const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
             </NavigationItem>
           </NavigationList>
         </nav>
-        <LoginButton>Login</LoginButton>
       </ContentWrapper>
     </header>
   )
