@@ -78,7 +78,12 @@ function SEO({ description = ``, lang = `en`, meta = [], title }: Props) {
         },
         // @ts-ignore
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 
