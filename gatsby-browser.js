@@ -162,4 +162,5 @@ If you weren't, that means we screwed something up. In that case, please kindly 
   )
 }
 
-setupHiringCLI()
+// Postpone the bootstrap for other logs to come in first.
+setTimeout(setupHiringCLI, 2000)
