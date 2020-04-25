@@ -1,7 +1,7 @@
 import React from "react"
 import Feature from "../components/base/feature/feature.component"
 import Hero from "../components/base/hero/hero.component"
-import LayoutBlock from "../components/base/layout-block/layout-block.component"
+import GuideLayout from "../components/base/layout-block/guide-layout"
 import RecruitmentAd from "../components/base/recruitment-ad/recruitment-ad.component"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,7 +12,7 @@ const IndexPage: AppFunctionComponent = () => (
     <SEO title="App'n'roll Developers" />
     <Hero />
     <RecruitmentAd />
-    <LayoutBlock>
+    <GuideLayout>
       <Feature
         title="We're blogging"
         linkText="Read the blog"
@@ -81,7 +81,7 @@ const IndexPage: AppFunctionComponent = () => (
         corporis culpa delectus doloremque, esse eum fugit illo in iste iure
         laborum nemo nisi non quaerat quia quos recusandae soluta veniam!
       </Feature>
-    </LayoutBlock>
+    </GuideLayout>
   </Layout>
 )
 

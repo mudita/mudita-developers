@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 import AppFunctionComponent from "../../../types/app-function-component.interface"
-import LayoutBlock from "../layout-block/layout-block.component"
+import GuideLayout from "../layout-block/guide-layout"
 
 const Header = styled.header`
-  padding: 1rem 0;
-  background-color: red;
+  padding: 1rem 2rem;
+  background-color: rgb(234, 40, 41);
   color: white;
 `
 
 const PageTitle: AppFunctionComponent = ({ children }) => {
   return (
     <Header>
-      <LayoutBlock>
+      <GuideLayout>
         <h1>{children}</h1>
-      </LayoutBlock>
+      </GuideLayout>
     </Header>
   )
 }

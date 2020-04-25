@@ -80,7 +80,7 @@ function SEO({ description = ``, lang = `en`, meta = [], title }: Props) {
       ].concat(meta)}
     >
       <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
         rel="stylesheet"
       />
     </Helmet>

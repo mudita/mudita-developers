@@ -4,7 +4,7 @@ import { textColor } from "../theming/theme-getters"
 
 const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   html, body  {
-    font-family: ubuntu, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     line-height: 1.5;
     color: ${textColor("primary")}

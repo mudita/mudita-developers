@@ -5,7 +5,7 @@ import AppFunctionComponent from "../../../types/app-function-component.interfac
 import AppnrollLogo from "../../../images/appnroll-logotype.svg"
 
 const ContentWrapper = styled.div`
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
