@@ -89,7 +89,7 @@ const Header: AppFunctionComponent = () => {
               <NavigationLink to="/styleguide">Code Styleguide</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/guide">Guide</NavigationLink>
+              <NavigationLink to="/guides">Guides</NavigationLink>
             </NavigationItem>
           </NavigationList>
         </nav>

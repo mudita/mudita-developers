@@ -31,8 +31,8 @@ const CodeReviewGuidePage: AppFunctionComponent<Props> = ({
 }) => {
   return (
     <Layout>
-      <SEO title="Code Review Guide" />
-      <PageTitle>Code Review Guide</PageTitle>
+      <SEO title="Code Review and Pull Requests Guide" />
+      <PageTitle>Code Review and Pull Requests Guide</PageTitle>
       <GuideLayout>
         <StyleguideTableOfContents items={tocItems} />
         <GuideContent>

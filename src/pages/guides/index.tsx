@@ -10,7 +10,9 @@ const GuidePage: AppFunctionComponent = () => {
     <Layout>
       <SEO title="Guide" />
       <PageTitle>Guide</PageTitle>
-      <Link to={"/guide/code-review"}>Code Review and Pull Requests Guide</Link>
+      <Link to={"/guides/pr-and-cr-guide"}>
+        Code Review and Pull Requests Guide
+      </Link>
     </Layout>
   )
 }
