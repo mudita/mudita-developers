@@ -17,4 +17,4 @@ const Container = (storyFn: () => React.ReactNode) => (
 
 storiesOf("Base|Header", module)
   .addDecorator(Container)
-  .add("headers", () => <HeaderComponent siteTitle="Title" />)
+  .add("headers", () => <HeaderComponent />)
