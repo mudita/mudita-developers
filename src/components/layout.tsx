@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import { Normalize } from "styled-normalize"
@@ -15,22 +14,12 @@ const AppWrapper = styled.div`
 `
 
 const Layout: AppFunctionComponent = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <ThemeProvider theme={theme}>
       <AppWrapper>
         <Normalize />
         <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <main>{children}</main>
         <Footer />
       </AppWrapper>
