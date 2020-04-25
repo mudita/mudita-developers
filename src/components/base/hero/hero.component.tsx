@@ -9,7 +9,7 @@ const HeroRoot = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: rgb(234, 40, 41);
   font-size: 1.2rem;
   color: #fff;
 `
