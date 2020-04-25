@@ -40,9 +40,7 @@ exports[`Storyshots Base|Footer headers 1`] = `
 
 exports[`Storyshots Base|Header headers 1`] = `
 .c0 {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,16 +68,22 @@ exports[`Storyshots Base|Header headers 1`] = `
 }
 
 .c1 {
-  color: black;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c4 {
+  margin-top: 9px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  color: black;
 }
 
 .c3 {
   margin-right: 0.5rem;
 }
 
-.c4 {
+.c5 {
   margin-left: 0;
   padding: 0;
   list-style: none;
@@ -89,18 +93,18 @@ exports[`Storyshots Base|Header headers 1`] = `
   display: flex;
 }
 
-.c5 {
+.c6 {
   margin-right: 1rem;
 }
 
-.c6 {
+.c7 {
   position: relative;
   color: red;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6::before {
+.c7::before {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -113,24 +117,16 @@ exports[`Storyshots Base|Header headers 1`] = `
   pointer-events: none;
 }
 
-.c6::before {
+.c7::before {
   top: calc(100% + 10px);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 10px solid #f00;
 }
 
-.c6.active::before,
-.c6:hover::before {
+.c7.active::before,
+.c7:hover::before {
   opacity: 1;
-}
-
-.c7 {
-  padding: 1rem;
-  border: none;
-  background-color: red;
-  line-height: 1;
-  color: #fff;
 }
 
 <div
@@ -158,82 +154,39 @@ exports[`Storyshots Base|Header headers 1`] = `
           <test-file-stub
             className="c3"
           />
-          <span>
-            Title
+          <span
+            className="c4"
+          >
+            Developers
           </span>
         </h1>
       </a>
       <nav>
         <ul
-          className="c4"
+          className="c5"
         >
           <li
-            className="c5"
+            className="c6"
           >
             <a
-              className="c6"
-              href="/blog"
-            >
-              Blog
-            </a>
-          </li>
-          <li
-            className="c5"
-          >
-            <a
-              className="c6"
-              href="/developers"
-            >
-              Developers
-            </a>
-          </li>
-          <li
-            className="c5"
-          >
-            <a
-              className="c6"
-              href="/technologies"
-            >
-              Technologies
-            </a>
-          </li>
-          <li
-            className="c5"
-          >
-            <a
-              className="c6"
+              className="c7"
               href="/styleguide"
             >
               Code Styleguide
             </a>
           </li>
           <li
-            className="c5"
+            className="c6"
           >
             <a
-              className="c6"
-              href="/guide"
+              className="c7"
+              href="/guides"
             >
-              Guide
-            </a>
-          </li>
-          <li
-            className="c5"
-          >
-            <a
-              className="c6"
-              href="/resources"
-            >
-              Resources
+              Guides
             </a>
           </li>
         </ul>
       </nav>
-      <button
-        className="c7"
-      >
-        Login
-      </button>
     </div>
   </header>
 </div>

@@ -59,11 +59,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `App'n'roll Developers`,
+        short_name: `App'n'roll Developers`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ea2829`,
+        theme_color: `#ea2829`,
         display: `minimal-ui`,
         icon: "src/images/appnroll.png",
       },
@@ -102,6 +102,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

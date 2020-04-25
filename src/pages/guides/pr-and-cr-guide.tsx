@@ -1,7 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
 import CodeStyleGuide from "../../components/base/code-style-guide/code-style-guide.component"
-import LayoutBlock from "../../components/base/layout-block/layout-block.component"
+import GuideContent from "../../components/base/guide-content/guide-content.component"
+import GuideLayout from "../../components/base/layout-block/guide-layout"
 import PageTitle from "../../components/base/page-title/page-title.component"
 import StyleguideTableOfContentsItem from "../../components/base/styleguide-table-of-contents/styleguide-table-of-contents-item.interface"
 import StyleguideTableOfContents from "../../components/base/styleguide-table-of-contents/styleguide-table-of-contents.component"
@@ -30,12 +31,14 @@ const CodeReviewGuidePage: AppFunctionComponent<Props> = ({
 }) => {
   return (
     <Layout>
-      <SEO title="Code Review Guide" />
-      <PageTitle>Code Review Guide</PageTitle>
-      <LayoutBlock>
+      <SEO title="Code Review and Pull Requests Guide" />
+      <PageTitle>Code Review and Pull Requests Guide</PageTitle>
+      <GuideLayout>
         <StyleguideTableOfContents items={tocItems} />
-        <CodeStyleGuide content={codeReviewGuideBody} />
-      </LayoutBlock>
+        <GuideContent>
+          <CodeStyleGuide content={codeReviewGuideBody} />
+        </GuideContent>
+      </GuideLayout>
     </Layout>
   )
 }

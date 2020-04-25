@@ -2,12 +2,10 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import AppFunctionComponent from "../../../types/app-function-component.interface"
-import AppnrollLogo from "../../../images/appnroll-logo.svg"
+import AppnrollLogo from "../../../images/appnroll-logotype.svg"
 
 const ContentWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,8 +18,14 @@ const Title = styled.h1`
 `
 
 const TitleLink = styled(Link)`
-  color: black;
   text-decoration: none;
+`
+
+const Subtitle = styled.span`
+  margin-top: 9px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  color: black;
 `
 
 const Logo = styled(AppnrollLogo)`
@@ -39,7 +43,7 @@ const NavigationItem = styled.li`
   margin-right: 1rem;
 `
 
-const NavigationLink = styled(Link)`
+const NavigationLink = styled(Link).attrs({ activeClassName: "active" })`
   position: relative;
   color: red;
   text-decoration: none;
@@ -69,63 +73,26 @@ const NavigationLink = styled(Link)`
   }
 `
 
-const LoginButton = styled.button`
-  padding: 1rem;
-  border: none;
-  background-color: red;
-  line-height: 1;
-  color: #fff;
-`
-
-interface Props {
-  siteTitle: string
-}
-
-const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
+const Header: AppFunctionComponent = () => {
   return (
     <header>
       <ContentWrapper>
         <TitleLink to="/">
           <Title>
             <Logo />
-            <span>{siteTitle}</span>
+            <Subtitle>Developers</Subtitle>
           </Title>
         </TitleLink>
         <nav>
           <NavigationList>
             <NavigationItem>
-              <NavigationLink to="/blog" activeClassName="active">
-                Blog
-              </NavigationLink>
+              <NavigationLink to="/styleguide">Code Styleguide</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/developers" activeClassName="active">
-                Developers
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/technologies" activeClassName="active">
-                Technologies
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/styleguide" activeClassName="active">
-                Code Styleguide
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/guide" activeClassName="active">
-                Guide
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/resources" activeClassName="active">
-                Resources
-              </NavigationLink>
+              <NavigationLink to="/guides">Guides</NavigationLink>
             </NavigationItem>
           </NavigationList>
         </nav>
-        <LoginButton>Login</LoginButton>
       </ContentWrapper>
     </header>
   )
