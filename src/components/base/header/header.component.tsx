@@ -39,7 +39,7 @@ const NavigationItem = styled.li`
   margin-right: 1rem;
 `
 
-const NavigationLink = styled(Link)`
+const NavigationLink = styled(Link).attrs({ activeClassName: "active" })`
   position: relative;
   color: red;
   text-decoration: none;
@@ -94,34 +94,10 @@ const Header: AppFunctionComponent<Props> = ({ siteTitle }) => {
         <nav>
           <NavigationList>
             <NavigationItem>
-              <NavigationLink to="/blog" activeClassName="active">
-                Blog
-              </NavigationLink>
+              <NavigationLink to="/styleguide">Code Styleguide</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/developers" activeClassName="active">
-                Developers
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/technologies" activeClassName="active">
-                Technologies
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/styleguide" activeClassName="active">
-                Code Styleguide
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/guide" activeClassName="active">
-                Guide
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink to="/resources" activeClassName="active">
-                Resources
-              </NavigationLink>
+              <NavigationLink to="/guide">Guide</NavigationLink>
             </NavigationItem>
           </NavigationList>
         </nav>
