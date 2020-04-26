@@ -233,10 +233,9 @@ const MyComponent: AppFunctionComponent<Props> = ({ property, optionalProperty =
 }
 ```
 
-## Don't use arrow return
+## Prrefer explicit return over arrow return in components
 
-Prefer braces in the component, rather than arrow return to avoid potentially massive and unrelated diffs when
-component will require more stuff in the body later in the game.
+Arrow returns tend to create massive diffs when a code that needs to be outside of the initial return statement is added to the component. Avoid this scenario by always using curly braces with the explicit return.
 
 ### Example
 
