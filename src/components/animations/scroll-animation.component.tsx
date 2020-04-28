@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import AppFunctionComponent from "../../types/app-function-component.interface"
 import styled from "styled-components"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Root = styled.section`
   background-color: #fbab7e;
@@ -29,6 +31,9 @@ const Box = styled.div`
 `
 
 const ScrollAnimation: AppFunctionComponent = () => {
+  useEffect(() => {
+    Aos.init()
+  })
   return (
     <Root>
       <Top>Scroll ↓</Top>
