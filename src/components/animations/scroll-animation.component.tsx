@@ -37,10 +37,10 @@ const ScrollAnimation: AppFunctionComponent = () => {
   return (
     <Root>
       <Top>Scroll ↓</Top>
-      <Box>Kamil P</Box>
-      <Box>Kamil S</Box>
-      <Box>Mateusz</Box>
-      <Box>Kasia</Box>
+      <Box data-aos="fade">Kamil P</Box>
+      <Box data-aos="flip-right">Kamil S</Box>
+      <Box data-aos="slide-up">Mateusz</Box>
+      <Box data-aos="zoom-out-down">Kasia</Box>
       <Box>Sylwia</Box>
       <Box>Ula</Box>
       <Box>Michał</Box>
