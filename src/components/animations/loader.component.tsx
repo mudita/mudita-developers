@@ -18,6 +18,13 @@ const Loader: AppFunctionComponent = () => {
             numOctaves="2"
             result="turbulence"
           />
+          <feDisplacementMap
+            in2="turbulence"
+            in="SourceGraphic"
+            scale="50"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
         </filter>
         <g fill="none" style={{ filter: "url(#displacementFilter)" }}>
           <path
