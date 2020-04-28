@@ -11,7 +11,15 @@ const Loader: AppFunctionComponent = () => {
   return (
     <Root>
       <svg viewBox="0 0 113 39">
-        <g fill="none">
+        <filter id="displacementFilter">
+          <feTurbulence
+            type="turbulenece"
+            baseFrequency="0.04"
+            numOctaves="2"
+            result="turbulence"
+          />
+        </filter>
+        <g fill="none" style={{ filter: "url(#displacementFilter)" }}>
           <path
             fill="#EA2829"
             d="M15.413 24.193v12.788l-1.72 1.725-1.717-1.725V24.193h3.437zm-5.863 0v10.355L6.115 31.1v-6.908H9.55zm8.289-13.557l3.435 2.406V31.1l-3.435 3.448V10.636zm5.86-5.108l3.44 2.407v17.282l-3.44 3.451V5.528zm-8.286 12.91v3.448H3.687v6.78L.25 25.218v-6.78h15.163zM6.115.25L9.55 2.658v13.474H6.115V.25zm5.86 10.385l3.438 2.406v3.09h-3.437v-5.496z"
