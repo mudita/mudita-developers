@@ -1,9 +1,15 @@
 import React from "react"
 import AppFunctionComponent from "../../types/app-function-component.interface"
+import styled from "styled-components"
+
+const Root = styled.div`
+  height: 100vh;
+  background-color: #fff;
+`
 
 const Loader: AppFunctionComponent = () => {
   return (
-    <div>
+    <Root>
       <svg viewBox="0 0 113 39">
         <g fill="none">
           <path
@@ -16,7 +22,7 @@ const Loader: AppFunctionComponent = () => {
           />
         </g>
       </svg>
-    </div>
+    </Root>
   )
 }
 
