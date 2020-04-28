@@ -35,7 +35,8 @@ const MenuElement = styled.li`
     width: 30px;
     height: 30px;
     fill: #fff;
-    transition: width 2s, height 2s, fill 1s;
+    transition: width 1s ease-in-out, height 1s ease-in-out, fill 1s;
+    cursor: pointer;
   }
 `
 
