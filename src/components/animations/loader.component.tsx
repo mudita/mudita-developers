@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
 import AppFunctionComponent from "../../types/app-function-component.interface"
 import styled from "styled-components"
+import anime from "animejs"
 
 const Root = styled.div`
   height: 100vh;
@@ -18,6 +19,21 @@ const Svg = styled.svg`
 `
 
 const Loader: AppFunctionComponent = () => {
+  useEffect(() => {
+    const tl = anime.timeline({
+      duration: 6000,
+      easing: "easeInOutQuart",
+    })
+
+    tl.add({
+      targets: "svg",
+      keyframes: [
+        { scale: 0.2, rotate: "0deg" },
+        { scale: 0.6, rotate: "360deg" },
+      ],
+      duration: 3000,
+    })
+  })
   return (
     <Root>
       <Svg viewBox="0 0 113 39">
