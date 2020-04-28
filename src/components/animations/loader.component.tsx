@@ -33,6 +33,7 @@ const Loader: AppFunctionComponent = () => {
       ],
       duration: 3000,
     })
+
     tl.add(
       {
         targets: ["#logo", "feTurbulence", "feDisplacementMap"],
@@ -42,6 +43,12 @@ const Loader: AppFunctionComponent = () => {
       },
       "-=2000"
     )
+
+    tl.add({
+      targets: "svg",
+      scale: 0,
+      duration: 500,
+    })
   })
   return (
     <Root>
