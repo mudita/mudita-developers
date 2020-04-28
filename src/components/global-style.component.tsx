@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     font-weight: 300;
     line-height: 1.5;
     color: ${textColor("primary")}
+    scroll-behavior: smooth;
   }
 `
 
