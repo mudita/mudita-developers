@@ -11,6 +11,8 @@ const SectionWrapper = styled.div`
     font-weight: 300;
     font-style: normal;
   }
+
+  // font-family: "Faux Snow";
 `
 
 const HeroSection: AppFunctionComponent = () => {

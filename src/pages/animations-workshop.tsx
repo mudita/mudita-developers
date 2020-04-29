@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   background-color: #100e17;
   color: white;
   width: 100%;
+  margin-left: 50px;
 `
 
 const AnimationsPage: AppFunctionComponent = () => {
