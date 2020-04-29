@@ -16,8 +16,8 @@ const SectionWrapper = styled.div`
   @font-face {
     font-family: "Faux Snow";
     src: local("Faux Snow"), local("Faux Snow"),
-      url("../fonts/fauxsnow-webfont.woff2") format("woff2"),
-      url("../fonts/fauxsnow-webfont.woff2") format("woff");
+      url("../../fonts/fauxsnow-webfont.woff") format("woff2"),
+      url("../../fonts/fauxsnow-webfont.woff2") format("woff");
     font-weight: 300;
     font-style: normal;
   }
