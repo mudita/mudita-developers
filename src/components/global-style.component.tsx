@@ -7,7 +7,8 @@ const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     font-family: Helvetica, sans-serif;
     font-weight: 300;
     line-height: 1.5;
-    color: ${textColor("primary")}
+    color: ${textColor("primary")};
+    scroll-behavior: smooth;
   }
 `
 
