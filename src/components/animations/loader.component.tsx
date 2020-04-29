@@ -26,7 +26,7 @@ const Loader: AppFunctionComponent = () => {
     })
 
     tl.add({
-      targets: "svg",
+      targets: "#mainLogo",
       keyframes: [
         { scale: 0.2, rotate: "0deg" },
         { scale: 0.6, rotate: "360deg" },
@@ -45,14 +45,14 @@ const Loader: AppFunctionComponent = () => {
     )
 
     tl.add({
-      targets: "svg",
+      targets: "#mainLogo",
       scale: 0,
       duration: 500,
     })
   })
   return (
     <Root>
-      <Svg viewBox="0 0 113 39">
+      <Svg id="mainLogo" viewBox="0 0 113 39">
         <filter id="displacementFilter">
           <feTurbulence
             type="turbulenece"
