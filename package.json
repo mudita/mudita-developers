@@ -10,6 +10,7 @@
     "@mdx-js/react": "^1.5.5",
     "@types/animejs": "^3.1.0",
     "@types/aos": "^3.0.3",
+    "@types/gsap": "^1.20.2",
     "animejs": "^3.2.0",
     "aos": "^2.3.4",
     "babel-plugin-remove-graphql-queries": "^2.7.23",

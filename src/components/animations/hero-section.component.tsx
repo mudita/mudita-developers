@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react"
+import { TweenLite, TimelineLite } from "gsap"
 import AppFunctionComponent from "../../types/app-function-component.interface"
 import styled from "styled-components"
 import snowImage from "../../images/snow.jpg"
@@ -10,6 +11,16 @@ import waterdrops from "../../images/waterdrops.jpg"
 const SectionWrapper = styled.div`
   min-height: 200vh;
   margin-left: 50px;
+  overflow: hidden;
+
+  @font-face {
+    font-family: "Faux Snow";
+    src: local("Faux Snow"), local("Faux Snow"),
+      url("../fonts/fauxsnow-webfont.woff2") format("woff2"),
+      url("../fonts/fauxsnow-webfont.woff2") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
 `
 const TextWithBackground = styled.p`
   font-weight: 1000;
@@ -23,6 +34,35 @@ const TextWithBackground = styled.p`
   background-size: cover;
   background-position-x: 542px;
   background-position-y: 951px;
+`
+
+const SnowWrapper = styled.div`
+  position: relative;
+`
+
+const Snow = styled.p`
+  font-family: 'Faux Snow';
+  position: absolute;
+  word-break: break-all;
+  display: flex;
+  width: 100%;
+  margin:
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transform: translate3d(-100%, -100%, 0);
+  opacity: 0;
+`
+
+const Snowflake = styled.p`
+  font-family: "Faux Snow";
+  font-size: 80px;
+  color: #fff;
+  transition: transform 0.5s ease-in-out;
+  margin: 80px;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
 `
 
 const Background = styled("div")<{ image: string; translation?: number }>`
@@ -95,15 +135,47 @@ const HeroSection: AppFunctionComponent = () => {
   const parallaxRef3 = useRef<HTMLInputElement>(null)
   const parallaxRef4 = useRef<HTMLInputElement>(null)
 
+  const snowRef = useRef<HTMLInputElement>(null)
+
   const images = [parallaxRef, parallaxRef2, parallaxRef3, parallaxRef4]
 
   useEffect(() => {
     document.addEventListener("scroll", () => doParallax(images))
+
+    const moveDown = TweenLite.to(snowRef.current, 8, {
+      duration: 8,
+      x: 300,
+      y: 150,
+    })
+    const moveToSides = TweenLite.to(snowRef.current, 8, {
+      duration: 8,
+      x: 600,
+      y: 300,
+    })
+    const disappear = TweenLite.to(snowRef.current, 2, {
+      duration: 2,
+      opacity: 0,
+    })
+    const appear = TweenLite.to(snowRef.current, 2, { duration: 2, opacity: 1 })
+    const timeline = new TimelineLite({ repeat: 15 })
+
+    timeline
+      .add(moveDown)
+      .add(moveToSides, 2)
+      .add(disappear, 6)
+      .add(appear, 0)
   })
 
   return (
     <SectionWrapper>
-      <TextWithBackground>Parallax effect!</TextWithBackground>
+      <SnowWrapper>
+        <Snow ref={snowRef}>
+          {"gq34uoerfji098egq34uoerfji098e".split("").map(el => (
+            <Snowflake key={el}>{el}</Snowflake>
+          ))}
+        </Snow>
+        <TextWithBackground>Parallax effect!</TextWithBackground>
+      </SnowWrapper>
       <Background ref={parallaxRef} image={gold} />
       <TextBlock>{exampleText}</TextBlock>
       <Background ref={parallaxRef2} image={cat} />
