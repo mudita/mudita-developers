@@ -65,7 +65,7 @@
     "colors": "^1.4.0",
     "cookie": "^0.4.0",
     "filenamify": "^4.1.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "gatsby-plugin-react-svg": "^3.0.0",
     "husky": "^4.2.1",
     "identity-obj-proxy": "^3.0.0",
