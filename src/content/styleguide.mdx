@@ -233,7 +233,7 @@ const MyComponent: AppFunctionComponent<Props> = ({ property, optionalProperty =
 }
 ```
 
-## Prrefer explicit return over arrow return in components
+## Prefer explicit return over arrow return in components
 
 Arrow returns tend to create massive diffs when a code that needs to be outside of the initial return statement is added to the component. Avoid this scenario by always using curly braces with the explicit return.
 
@@ -256,7 +256,7 @@ const MyComponent: AppFunctionComponent = () => <div />
 `AppFunctionComponent` interface is a basic component type in all of our applications. On top of extending the React's
 `FunctionComponent` it provides two additional benefits:
 
-- it makes all the properties on the root lever `readonly` to prevent their accidental modification,
+- it makes all the properties on the root level `readonly` to prevent their accidental modification,
 - it adds `className: string` property so that all components will be easily stylable.
 
 When the app have some other specific properties that all components can use, then extend the `AppFunctionComponent`
@@ -297,7 +297,7 @@ const Header: AppFunctionComponent = () => {
 export default Header
 ```
 
-## Smart adn dumb
+## Smart and dumb
 
 contact-form & contact-form-ui
 
