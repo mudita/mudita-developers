@@ -96,7 +96,7 @@
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest --config=./.jest/config.js",
+    "test": "jest --config=./.jest/config.js --passWithNoTests",
     "test:images": "npm run storybook:build -- --quiet && jest ./src/storyshots-images.test.ts --config=./.jest/config-base.js",
     "test:images:update": "npm run test:images -- --updateSnapshot",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
