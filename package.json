@@ -23,7 +23,7 @@
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.4.0",
     "gatsby-remark-heading-slug": "^0.2.0",
-    "gatsby-remark-prismjs": "^3.3.31",
+    "gatsby-remark-prismjs": "^3.5.1",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-sharp": "^2.3.14",
     "prop-types": "^15.7.2",
