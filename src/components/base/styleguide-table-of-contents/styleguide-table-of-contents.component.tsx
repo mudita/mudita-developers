@@ -37,9 +37,11 @@ interface Props {
   items: StyleguideTableOfContentsItem[]
 }
 
-const Item: AppFunctionComponent<StyleguideTableOfContentsItem & {
-  level: number
-}> = ({ url, title, items, level }) => {
+const Item: AppFunctionComponent<
+  StyleguideTableOfContentsItem & {
+    level: number
+  }
+> = ({ url, title, items, level }) => {
   const primary = level === 0
   return (
     <ListItem primary={primary}>
@@ -48,7 +50,7 @@ const Item: AppFunctionComponent<StyleguideTableOfContentsItem & {
       </Anchor>
       {items && level < 1 && (
         <NestedList>
-          {items.map(item => (
+          {items.map((item) => (
             <Item key={item.url} {...item} level={level + 1} />
           ))}
         </NestedList>
@@ -60,7 +62,7 @@ const Item: AppFunctionComponent<StyleguideTableOfContentsItem & {
 const StyleguideTableOfContents: AppFunctionComponent<Props> = ({ items }) => {
   return (
     <MainList>
-      {items.map(item => (
+      {items.map((item) => (
         <Item key={item.url} {...item} level={0} />
       ))}
     </MainList>
