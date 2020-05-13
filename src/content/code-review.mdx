@@ -148,3 +148,34 @@ If it’s helpful for you - yes, you should. In some cases it’s easier to add 
 
 :warning: The committed suggestion should be always validated if it doesn’t cause any issue, (e.g. fails of type checking). Take care of that.
 
+## Can I use integration branches?
+No, you should avoid integration branches. It's because they usually cause really big merges to a master branch, which can be dangerous even if every part of code was reviewed and tested earlier.
+Generally the best practise is to merge as small part of code as it's possible.
+
+It may be not clear what to do with large tasks, which should be presented on production only whole. There are more than one solution for these kind of situations:
+
+**Puzzle / Chain**
+
+If it's possible a large task should be split into smaller parts and then these parts should represents parts of code (PRs). If you need to create many components to implement something, then use storybook to implement each component separately [1].
+This way the component is able to be reviewed (small PR) and tested (visible in storybook).
+- You are not limited with a number of components you implemented while this process, because each PR is merged to a master as an individual subtask and is ready to use by every collaborator.
+- This way avoids a long-time waiting for a code from a large task.
+
+The last part (PR) which should be implemented is an integration of earlier implemented components. It means this part will contain an usage of these components and after merge a whole task will be visible on production [2].
+This process is like a puzzle, where each piece is created separately. QA can test each part separately or only the last part where integration is made.
+
+[1] In the best scenario each component can be implemented separately based on master branch. If it's not possible in your case, you can do a branches-chain, where each next part is based on a precious one, like A->B->C.
+Remember: this way can cause a longer CR process, because changing a base in PR can dismiss reviews.
+
+[2] If the last (integration) part is too large for single PR, then you can use a **feature-flag** to hide some parts on production (flag is off on production environment).
+
+**Protected branch**
+
+Sometimes the above process can be impossible or really hard to use, then you can use an "integration branch", **BUT** there are some requirements.
+Remember that a recommendation of **not** using integration branches is not only a big-merges problem. We need to be sure that each part merged to this branch was really approved while a CR process.
+A standard feature-branch can't ensure us, because they are not protected - this means you can push everything into it.
+
+**If you are really sure there is no different sensible way** to organize a large task in a repository, then create a protected branch to force each line of code of being verified.
+
+How to create a protected branch?
+[TBA]
