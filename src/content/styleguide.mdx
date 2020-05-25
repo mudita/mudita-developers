@@ -153,7 +153,8 @@ code. Immutability should be ensured within a reason. The convention is native t
 
 ```typescript
 // Basic configuration value.
-export const COMMENTS_COUNT = 10
+export const 
+_COUNT = 10
 
 // Component allowing to access its default config.
 export class Slider {
@@ -164,9 +165,11 @@ export class Slider {
 Number.MAX_SAFE_INTEGER
 ```
 
-## Comments placement
+## Comments placement and style
 
 When describing your code by using comments, place them above the code it relates to. This is a common convention throught plethora of codebases so it became a common expectation. Avoid putting any comments in the same line and behind the commented code. It's unexpected and difficult to reason about and hard to read due to the need of horizontal scrolling.
+
+Whenever possible, use inline comments using `//`. Reserve multi-line comments for documentation.
 
 ### Examples
 
