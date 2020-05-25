@@ -164,6 +164,24 @@ export class Slider {
 Number.MAX_SAFE_INTEGER
 ```
 
+## Comments placement
+
+When describing your code by using comments, place them above the code it relates to. This is a common convention throught plethora of codebases so it became a common expectation. Avoid putting any comments in the same line and behind the commented code. It's unexpected and difficult to reason about and hard to read due to the need of horizontal scrolling.
+
+### Examples
+
+```typescript
+// This a valid comment. Everyone knows it describes the line below.
+const someFn = () => {}
+
+const anotherFn = () => {} // This is not a good place for a comment.
+
+const someMoreFn = () => {
+  ...
+} // This comment looks like it describes `theLastFn`, so it's bad.
+const theLastFn = () => {}
+```
+
 # Code
 
 ## Component's module structure
