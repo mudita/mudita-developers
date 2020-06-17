@@ -38,6 +38,9 @@ const GuidePage: AppFunctionComponent = () => {
               Code Review and Pull Requests Guide
             </GuideLink>
           </GuideItem>
+          <GuideItem>
+            <GuideLink to={"/guides/boards"}>Boards</GuideLink>
+          </GuideItem>
         </GuidesList>
       </Content>
     </Layout>
