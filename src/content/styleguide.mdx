@@ -253,6 +253,33 @@ const MyComponent: AppFunctionComponent<Props> = ({ property, optionalProperty =
 }
 ```
 
+## Avoid destructuring props if it isn't needed
+
+Try to keep passing props as simple as possible. Avoid destructurization if you can pass the whole object or part of it by using the rest operator.
+
+### Example
+
+```tsx
+// Good.
+const MyComponent: AppFunctionComponent<Props> = (props) => {
+  return <div {...props} />
+}
+
+const MyComponent: AppFunctionComponent<Props> = ({ otherProperty, ...props }) => {
+  return (
+    <div otherProperty={otherProperty}>
+      <div {...props} />
+    </div>
+  )
+}
+
+// Bad.
+const MyComponent: AppFunctionComponent<Props> = ({ otherProperty, ...props }) => {
+  return <div otherProperty={otherProperty} {...props} />
+}
+```
+
+
 ## Prrefer explicit return over arrow return in components
 
 Arrow returns tend to create massive diffs when a code that needs to be outside of the initial return statement is added to the component. Avoid this scenario by always using curly braces with the explicit return.
