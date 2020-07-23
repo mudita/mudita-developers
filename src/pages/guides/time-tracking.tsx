@@ -24,7 +24,7 @@ interface Props {
 const TimeTrackingGuidePage: AppFunctionComponent<Props> = ({
   data: {
     guide: {
-      body: codeReviewGuideBody,
+      body: timeTrackingGuideBody,
       tableOfContents: { items: tocItems },
     },
   },
@@ -36,7 +36,7 @@ const TimeTrackingGuidePage: AppFunctionComponent<Props> = ({
       <GuideLayout>
         <StyleguideTableOfContents items={tocItems} />
         <GuideContent>
-          <CodeStyleGuide content={codeReviewGuideBody} />
+          <CodeStyleGuide content={timeTrackingGuideBody} />
         </GuideContent>
       </GuideLayout>
     </Layout>
