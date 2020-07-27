@@ -41,6 +41,9 @@ const GuidePage: AppFunctionComponent = () => {
           <GuideItem>
             <GuideLink to={"/guides/boards"}>Boards</GuideLink>
           </GuideItem>
+          <GuideItem>
+            <GuideLink to={"/guides/time-tracking"}>Time tracking</GuideLink>
+          </GuideItem>
         </GuidesList>
       </Content>
     </Layout>

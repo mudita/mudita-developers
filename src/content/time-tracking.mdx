@@ -1,0 +1,65 @@
+# Time Tracking Guide
+
+This tracking guide is not the same the company’s general rules. It relates only to the developer stuff and additional things that may be helpful for our work.
+For more projects/tasks details, please read our company tracking rules.
+
+## Where should I track my time?
+We are using the Harvest app to store tracked time. You can use a web / phone / desktop app or Chrome / Mozilla / Microsoft Edge extension [(look here)](https://www.getharvest.com/apps-and-integrations/directory#mobile-desktop). You can choose which one will be the best for you, to make it as easy as it’s possible & not disturb you while doing your daily stuff.
+
+
+## How should I track?
+
+### Project’s tasks
+It was intentionally described as „Harvest app to store tracked time”, because it’s not always the place where you should add tasks.
+**To track any project’s task we are using a JIRA-Harvest connection**, which allows you to start and stop timer related to current task without your special involvement.
+The only thing you should do is to find the „Harvest Time Tracking by 42nd” in the task on JIRA and then connect your Harvest to it. When you're done, you can just start timer directly from the task's card and **it will be automatically visible in your harvest timesheet**, with proper project, task category and description and a link to the task added.
+The only thing you should do is to click the big green button in JIRA :) What a time saver!
+
+Warning: please **don’t track project tasks outside of the JIRA usage**. It’s really important to do it this way. Not only it makes the linking easy, but also ensures JIRA stays up to date in regards of timers in tasks to verify estimated time vs spend time. It’s possible only this way.
+
+### Project’s stuff
+Each project has a list of categories in Harvest, but on JIRA you only track the `development` (or similar). **All project things which are not tasks should be tracked by Harvest, choosing the related category (meeting, code review, estimation etc.) and adding a description. **The last thing is really important to always be sure what meeting/estimation took how much time. Description of the code review time is not obligatory.
+
+### OMG, the project I need to work on is not on the list in Harvest! What should I do?
+If you want to do a code review (or something else) for somebody from not your project, please ask your PM to enable this project for you. It’s important to ask before starting doing this, because your PM should be informed about it and have a final say if it's ok.
+
+### Other tasks
+Luckily our working day is not only projects stuff. Each developer is added to the „Dev Team Internal” project, which is created to track your time spent on developing monthly dev team tasks, learning, meetings (including 1on1s). Remember about a description of this kind of tasks to make it clear what a dev task you are doing, what do you do while learning, what meetings you’re participating in etc.
+
+
+## Tracking good manners
+
+### Adding a description
+As mentioned a few times earlier, it’s an expected practice to add descriptions to your tracked positions. **Remember that you don’t need to describe them in details. Try to use a short definition of described task.** E.g. daily, planning, refinement (for meetings), Accessibility/A11y, TypeScript generics, Unit tests (for learning), a copy-pasted name of your dev task. The main goal of a description is to easy&fast define what it is, to easy&fast inform a PM about it.
+
+### Regularity - keep your PM always informed
+It’s not obvious but, **your timesheet should always be up to date**. It’s not good to fill a timesheet at the end of the day or week, because it’s impossible to fill it accurately. **The best and expected way of tracking time is to keep a timer always running when you’re working.**
+It’s not only for PMs, but for you as developer too. When the timesheet shows you’re working on an important task, nobody will disturb you. :)
+
+### Overtime
+It’s important to **control your timesheet by yourself to prevent extra hours.** It means you should control your estimated vs spent time on a task, your break time (don’t go beyond a limit, but respect a daily rest) and your weekly total hours.
+If you know you won’t finish a task in an estimated time, just let your PM know about it.
+
+### Weekly submitting
+Your timesheet will be verified by your PM every week, so when the week is over, submit your timesheet for approval. You can do it until EOD. Then call it a week and have fun. 🍹
+
+## Free time
+
+### Break
+It couldn’t not be mentioned! Our break should be also tracked. Use general tracking rules for this too, but remember that break is free from description. It’s your time :)
+
+### Holidays
+Holidays should be also tracked. It doesn’t mean you should start your timer when you start a holidays and stop it when you’re back. Just add 8hours per each holiday day in a project Public holiday/Sickness/Vacation (relatively to holidays type).
+
+
+## Tracking fails
+Don’t panic! Tracking issues do happen. Like:
+
+### You forgot to start your timer when you started a task
+Of course, try to avoid these situations, but if it does happen, just update the time spent with a proper amount.  If it’s a project task, then you can use the synchronization feature in JIRA (Avatar -> Synchronize timers to issues -> filter by expected day -> manually do a connection with a „>>” button) to update the timer with the Harvest's value.  Please be careful with it! It’s a next part of time spent so it could be replaced instead of totaled up.
+
+### You forgot to submit your timesheet
+Just submit it ASAP or expect a friendly reminder spam from your PM.
+
+### You tracked something wrong
+The weekly PM check is to verify all timesheet mistakes, so if something will be wrong, you will be requested to fix it. You should do it ASAP too and resubmit the week.
