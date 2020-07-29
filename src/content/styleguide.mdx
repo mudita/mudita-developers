@@ -370,9 +370,7 @@ button.test.tsx
 checkout.e2e.tsx
 ```
 
-## writing tests
-
-on root, test("x works"), no "should"
+## Writing tests
 
 ## Use `test`
 
@@ -435,9 +433,10 @@ test("with good callback", () => ...)
 test("with bad callback", function() { ... })
 ```
 
-## Don't use root level `describe`
+## Don't use root level `describe` to just name the component you're testing
 
-The module's name is enough to find a test and know what it is.
+The module's filenamename is enough to find a test and know what it is. Use describes only
+to group connected functionalities.
 
 ### Examples
 
@@ -449,6 +448,10 @@ describe("MyComponent test", () => {
 
 // Good. (Just test.)
 test("", () => ...)
+
+// Good. (Grouping functionalities.)
+describe("when smiling", () => {...})
+describe("when having fun", () => {...})
 ```
 
 # Stories
