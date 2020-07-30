@@ -18,6 +18,7 @@ When naming files, you need to remember about few things.
 
 The available file type suffixes (list is non-exhaustive):
 - `.component` for React components,
+- `.styled` for Styled components,
 - `.stories` for files holding Storybook stories,
 - `.test` for unit tests,
 - `.e2e` for end-to-end tests,
@@ -327,7 +328,7 @@ interface AppFunctionComponent<P = {}>
 
 Don't export styled components unnecessarily.
 
-If you need them in multiple files, then maybe you need a separate file for that component.
+If you use some styled components in many places, their place should be in separate file with styled.tsx extension.
 
 
 ```typescript
