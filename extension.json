@@ -1,0 +1,8 @@
+{
+  "id": "workshop-2",
+  "name": "workshop-2",
+  "srcdoc": "./build/index.html",
+  "fieldTypes": [
+    "Object"
+  ]
+}
