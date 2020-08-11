@@ -21,6 +21,7 @@ The available file type suffixes (list is non-exhaustive):
 - `.stories` for files holding Storybook stories,
 - `.test` for unit tests,
 - `.e2e` for end-to-end tests,
+- `.hook` for hooks,
 - `.fragment` for GraphQL fragments,
 - `.interface` for interfaces,
 - `.request` for modules exposing an HTTP request,
@@ -45,7 +46,10 @@ parse-user-profile.ts
 
 ## Folders structure and files organisation
 
-Keep the related files in one catalogue for ease of finding the relation and working on a single module.
+Folders structure of the whole project should be clear and easy to navigate. A project `src` should contain defined structure:
+- `/components` is an obvious directory to store all components. This folder has also its own structure inside:
+
+Keep the component related files in one catalogue for ease of finding the relation and working on a single module.
 
 ### Examples
 
@@ -59,6 +63,16 @@ Keep the related files in one catalogue for ease of finding the relation and wor
 
 Modules should be placed in a flat structure of directories, which should be similar to how storybook is organised.
 [More about Storybook organisation](/stories#stories-structure)
+
+- `/server-functions` is a place to store a source code of all Netlify functions. Remember to keep this file flat and containing only endpoints, because of Netlify specification.
+- `/server-functions-tests` tests of stored above functions should be placed here. This is an exception from the base rule. Netlify doesn't allow to keep test files in functions folder.
+- `/hooks` - put all hooks here.
+- `/templates` - all templates for generated pages should be stored here.
+- `/pages-creators` - creators, which use above templates to create dynamic pages.
+- `/source-nodes-creators` - creators, which generate Gatsby source nodes
+- `/pages` - all static pages
+- `/images` - all static images if they are needed
+- `/constants` - all constants used in the app
 
 ## Avoid index files
 
