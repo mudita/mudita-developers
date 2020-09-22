@@ -43,7 +43,10 @@ const NavigationItem = styled.li`
   margin-right: 1rem;
 `
 
-const NavigationLink = styled(Link).attrs({ activeClassName: "active" })`
+const NavigationLink = styled(Link).attrs({
+  activeClassName: "active",
+  partiallyActive: true,
+})`
   position: relative;
   color: red;
   text-decoration: none;
