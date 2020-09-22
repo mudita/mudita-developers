@@ -86,10 +86,10 @@ const Header: AppFunctionComponent = () => {
         <nav>
           <NavigationList>
             <NavigationItem>
-              <NavigationLink to="/styleguide">Code Styleguide</NavigationLink>
+              <NavigationLink to="/styleguide">Code styleguide</NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink to="/guides">Guides</NavigationLink>
+              <NavigationLink to="/guides">Developer guides</NavigationLink>
             </NavigationItem>
           </NavigationList>
         </nav>

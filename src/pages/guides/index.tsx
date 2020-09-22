@@ -1,6 +1,7 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
+import BoxGrid from "../../components/base/box-grid/box-grid.component"
+import Box from "../../components/base/box/box.component"
 import PageTitle from "../../components/base/page-title/page-title.component"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -10,41 +11,25 @@ const Content = styled.section`
   margin: 2rem;
 `
 
-const GuidesList = styled.ul`
-  padding-left: 1rem;
-`
-
-const GuideItem = styled.li``
-
-const GuideLink = styled(Link)`
-  color: rgb(234, 40, 41);
-  text-decoration: none;
-  font-size: 1.2rem;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`
-
 const GuidePage: AppFunctionComponent = () => {
   return (
     <Layout>
       <SEO title="Guides" />
       <PageTitle>Guides</PageTitle>
       <Content>
-        <GuidesList>
-          <GuideItem>
-            <GuideLink to={"/guides/pr-and-cr-guide"}>
-              Code Review and Pull Requests Guide
-            </GuideLink>
-          </GuideItem>
-          <GuideItem>
-            <GuideLink to={"/guides/boards"}>Boards</GuideLink>
-          </GuideItem>
-          <GuideItem>
-            <GuideLink to={"/guides/time-tracking"}>Time tracking</GuideLink>
-          </GuideItem>
-        </GuidesList>
+        <BoxGrid>
+          <Box
+            title={"Code Review and Pull Requests"}
+            description={""}
+            link={"/guides/pr-and-cr-guide"}
+          />
+          <Box title={"Boards"} description={""} link={"/guides/boards"} />
+          <Box
+            title={"Time tracking"}
+            description={""}
+            link={"/guides/time-tracking"}
+          />
+        </BoxGrid>
       </Content>
     </Layout>
   )

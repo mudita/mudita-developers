@@ -4,7 +4,7 @@ const theme = {
       primary: "#000000",
     },
     background: {
-      primary: "hotpink",
+      primary: "rgb(234, 40, 41)",
     },
   },
   layout: {

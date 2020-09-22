@@ -3,7 +3,6 @@ import styled from "styled-components"
 import AppFunctionComponent from "../../../types/app-function-component.interface"
 
 const RecruitmentAdRoot = styled.section`
-  margin: 1rem 0;
   padding: 2rem 0;
   border-style: solid;
   border-color: red;
