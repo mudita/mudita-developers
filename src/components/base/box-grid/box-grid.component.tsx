@@ -10,8 +10,8 @@ const Container = styled.div`
   gap: 20px;
 `
 
-const BoxGrid: AppFunctionComponent = ({ children }) => {
-  return <Container>{children}</Container>
+const BoxGrid: AppFunctionComponent = ({ children, className }) => {
+  return <Container className={className}>{children}</Container>
 }
 
 export default BoxGrid

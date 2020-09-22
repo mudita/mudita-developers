@@ -20,13 +20,19 @@ const GuidePage: AppFunctionComponent = () => {
         <BoxGrid>
           <Box
             title={"Code Review and Pull Requests"}
-            description={""}
+            description={"Learn about our GitHubbing."}
             link={"/guides/pr-and-cr-guide"}
           />
-          <Box title={"Boards"} description={""} link={"/guides/boards"} />
+          <Box
+            title={"Boards"}
+            description={
+              "List of Trello boards you might want to participate in."
+            }
+            link={"/guides/boards"}
+          />
           <Box
             title={"Time tracking"}
-            description={""}
+            description={"Geta hold on the time tracking story."}
             link={"/guides/time-tracking"}
           />
         </BoxGrid>
