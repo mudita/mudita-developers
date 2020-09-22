@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import AppFunctionComponent from "../../../types/app-function-component.interface"
 
 interface BoxProps {
@@ -9,7 +9,7 @@ interface BoxProps {
   link: string
 }
 
-const Container = styled(Link)`
+const linkStyles = css`
   width: 300px;
   padding: 2rem;
   background: black;
@@ -29,12 +29,28 @@ const Container = styled(Link)`
   }
 `
 
+const Container = styled(Link)`
+  ${linkStyles}
+`
+
+const ExternalLink = styled.a`
+  ${linkStyles}
+`
+
 const Box: AppFunctionComponent<BoxProps> = ({ title, description, link }) => {
-  return (
-    <Container to={link}>
+  const content = (
+    <>
       <h3>{title}</h3>
       <p>{description}</p>
-    </Container>
+    </>
+  )
+
+  return link.startsWith("http") ? (
+    <ExternalLink href={link} rel={"noopener"}>
+      {content}
+    </ExternalLink>
+  ) : (
+    <Container to={link}>{content}</Container>
   )
 }
 
