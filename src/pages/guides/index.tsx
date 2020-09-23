@@ -32,8 +32,15 @@ const GuidePage: AppFunctionComponent = () => {
           />
           <Box
             title={"Time tracking"}
-            description={"Geta hold on the time tracking story."}
+            description={"Get a hold on the time tracking story."}
             link={"/guides/time-tracking"}
+          />
+          <Box
+            title={"Objectives and Key Results"}
+            description={
+              "Learn how we set our focus to meet our goals and become the best."
+            }
+            link={"/guides/okr"}
           />
         </BoxGrid>
       </Content>
