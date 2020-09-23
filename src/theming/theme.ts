@@ -2,6 +2,7 @@ const theme = {
   color: {
     text: {
       primary: "#000000",
+      link: "rgb(234, 40, 41)",
     },
     background: {
       primary: "rgb(234, 40, 41)",
