@@ -9,7 +9,7 @@ const RawList = styled.ul`
 `
 
 const MainList = styled(RawList)`
-  margin: 2rem;
+  margin: 0 2rem 2rem;
   width: 200px;
   flex-shrink: 0;
 `

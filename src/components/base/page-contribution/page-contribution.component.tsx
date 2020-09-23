@@ -4,7 +4,7 @@ import AppFunctionComponent from "../../../types/app-function-component.interfac
 import { GithubContributors } from "../../../types/github-contributors.interface"
 
 const Container = styled.aside`
-  margin: 1rem;
+  margin: 1rem 1rem 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
