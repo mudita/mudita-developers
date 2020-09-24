@@ -33,7 +33,6 @@ const TimeTrackingGuidePage: AppFunctionComponent<Props> = ({
     github,
   },
 }) => {
-  console.log(github)
   return (
     <Layout>
       <SEO title="Time Tracking Guide" />
