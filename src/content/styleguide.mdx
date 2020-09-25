@@ -365,7 +365,6 @@ Don't export styled components unnecessarily.
 
 If you use some styled components in many places, their place should be in separate file with styled.tsx extension.
 
-
 ```typescript
 const HeaderRoot = styled.header`
   background: red
@@ -378,6 +377,31 @@ const Header: AppFunctionComponent = () => {
 }
 
 export default Header
+```
+
+### Props of styled components
+
+If props definition of a component is short and used individually, add it inline. It will be easier to read, because usually there are a lot of styled components defined in a one file.
+
+```typescript
+const Button = styled.button<{ pending: boolean }>`...`
+```
+
+If a styled component becomes to be more advanced one (with many props or its props are reuseable), wonder about creating a dedicated interface for it.
+
+```typescript
+// Could be hard to read
+const Button = styled.button<{ pending: boolean, wide: boolean, empty: boolean, ... }>`...`
+
+// Much better
+interface ButtonProps {
+  pending: boolean
+  wide: boolean
+  empty: boolean
+  ...
+}
+
+const Button = styled.button<ButtonProps>`...`
 ```
 
 ## Smart and dumb
