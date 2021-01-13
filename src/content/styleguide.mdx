@@ -51,7 +51,7 @@ parse-user-profile.ts
 
 ## Folders structure and files organisation
 
-Folders structure of the whole project should be built with _domain driven development_ in mind. This will make it clear and easy to navigate. A project `src` directory should contain only domains (modules). Each module should be responsible for a separate functionality, its API should be clear, obvious and what's the most important - it shouldn't cause circular dependency with other modules. If it does, its worth to rethink and refactor the code (maybe split it into even smaller modules?).
+Folders structure of the whole project should be built with _domain driven design_ principles in mind. This will make it clear and easy to navigate. A project's `src` directory should contain only domains modules. Each module should be responsible for a separate functionality, its API should be clear, obvious and—what's the most important—it shouldn't cause circular dependency issue with other modules. If it does, its worth to rethink and refactor the code (maybe split it into even smaller modules?).
 
 The module has no obligatory structure. It may contain only one file or the whole app-like structure containing store, sub-components, internal routing, helpers etc. However, there are few rules that should be applied (if needed):
 - `<module>/components` is an obvious directory to store all components used in given module
