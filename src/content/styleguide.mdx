@@ -19,17 +19,17 @@ When naming files, you need to remember about few things.
 - Name the file the same as the main (default) export.
 
 The available file type suffixes (list is non-exhaustive):
-- `.container` for connecting store to component (Redux's `connect`)
-- `.component` for standard React components,
-- `.styled` for Styled components,
-- `.stories` for files holding Storybook stories,
-- `.test` for unit tests,
-- `.e2e` for end-to-end tests,
-- `.hook` for hooks,
-- `.fragment` for GraphQL fragments,
-- `.types` for interfaces, types, enums, etc.
-- `.request` for modules exposing an HTTP request,
-- `.fixture` for data used in tests.
+- `some-name.component.tsx` for connecting store to component (Redux's `connect`)
+- `some-name-ui.component.tsx`, for standard React components,
+- `some-name.styled.tsx` for Styled components,
+- `some-name.stories.tsx` for files holding Storybook stories,
+- `some-name.test.tsx` for unit tests,
+- `some-name.e2e.tsx` for end-to-end tests,
+- `some-name.hook.tsx` for hooks,
+- `some-name.fragment.tsx` for GraphQL fragments,
+- `some-name.types.tsx` for interfaces, types, enums, etc.
+- `some-name.request.tsx` for modules exposing an HTTP request,
+- `some-name.fixture.tsx` for data used in tests.
 
 There are some modules that doesn't need that suffix. It usually happen when the filename is important (like in the
 `/pages` folder in Gatsby projects) or the exported value is a function (then `.function` suffix would be redundant, as
