@@ -27,7 +27,7 @@ The available file type suffixes (list is non-exhaustive):
 - `some-name.e2e.tsx` for end-to-end tests,
 - `some-name.hook.tsx` for hooks,
 - `some-name.fragment.tsx` for GraphQL fragments,
-- `some-name.types.tsx` for interfaces, types, enums, etc.
+- `some-name.interface.ts`, `some-name.type.ts`, `some-name.enum.ts`... for interfaces, types, enums, etc.
 - `some-name.request.tsx` for modules exposing an HTTP request,
 - `some-name.fixture.tsx` for data used in tests.
 
@@ -44,7 +44,9 @@ contact-form-component.stories.tsx
 contact-form-component.test.tsx
 contact-form-component.e2e.tsx
 user-profile.fragment.ts
-user-profile.types.ts
+user-profile.interface.ts
+user-profile.enum.ts
+user-profile.type.ts
 get-user-profile.request.ts
 parse-user-profile.ts
 ```
@@ -77,12 +79,13 @@ The module has no obligatory structure. It may contain only one file or the whol
       │   │   ├── month.component.tsx
       │   │   ├── month.stories.tsx
       │   │   ├── month.test.tsx
-      │   │   └── month.types.ts
+      │   │   ├── month.type.ts
+      │   │   └── month.interface.ts
       │   └── week
       │       ├── week.component.tsx
       │       ├── week.stories.tsx
       │       ├── week.test.tsx
-      │       └── week.types.ts
+      │       └── week.enum.ts
       ├── constants
       │   └── weekdays.ts
       ├── img
