@@ -7,6 +7,15 @@
   App'n'roll' Developers
 </h1>
 
+## Setup
+
+1. Create a new personal GitHub token: https://github.com/settings/tokens with two scopes:
+
+- `read:user`,
+- `user:email`.
+
+2. Set this token in the `.env.development` file under the `GITHUB_TOKEN` key.
+
 ## Fonts
 
 - [Ubuntu](https://design.ubuntu.com/font/)
