@@ -45,7 +45,7 @@ const GuidePage: AppFunctionComponent = () => {
           <Box
             title={"Libraries"}
             description={
-              "Learn how we install ans configure external libraries to improving our jobs."
+              "Learn how we install and configure external libraries to improve our job."
             }
             link={"/guides/libraries"}
           />

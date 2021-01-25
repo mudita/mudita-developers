@@ -1,14 +1,14 @@
 # Libraries
 
-This guide explaining how to install, use and configure the libraries developed by [@mudita](https://github.com/orgs/mudita/teams/web) web team.
+This guide explains how to install, use and configure the libraries developed by [@mudita](https://github.com/orgs/mudita/teams/web) web team.
 
 ## Secrets Manager
 
-The secret's manager [@mudita/sm-cli](https://www.npmjs.com/package/@mudita/sm-cli) used to storing and sharing the environment variable between the developers. 
-The library provides a friendly CLI interface which helps developers to send their variables to [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) and protected them from not authorized access from outside.
+The secrets manager [@mudita/sm-cli](https://www.npmjs.com/package/@mudita/sm-cli) is used to store and share the environment variables between developers.
+The library provides a friendly CLI interface which helps developers to send their variables to [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) and protect them from unauthorised access from outside.
 
 ### Installation
-For star using `sm-cli` you should install the module globally via:
+To start using `sm-cli` you should install the module globally via:
 ```bash
 $ npm install -g @mudita/sm-cli
 ```
@@ -49,7 +49,7 @@ Make sure that you have configured [AWS CLI](https://docs.aws.amazon.com/cli/lat
 
 ### Simple usage
 
-1. On AWS Secrets Manager dashboard click on `Store new secrets` for creating new secrets
+1. On AWS Secrets Manager dashboard click on `Store new secrets` to create new secrets.
 2. Select `Other type of secrets (e.g. API key)` type in the list of availiable options
 3. Provide secrets name
 4. In project root directory run next command
@@ -63,7 +63,7 @@ it should create `.secretsrc` file in root directory
 ```bash
 $ sm-cli sync
 ```
-This command will synchronize your local env with secrets manager storage
+This command will synchronise your local env with secrets manager storage.
 
 ### Read more
 [@mudita/sm-cli](https://www.npmjs.com/package/@mudita/sm-cli)
