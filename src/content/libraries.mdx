@@ -1,0 +1,69 @@
+# Libraries
+
+This guide explains how to install, use and configure the libraries developed by [@mudita](https://github.com/orgs/mudita/teams/web) web team.
+
+## Secrets Manager
+
+The secrets manager [@mudita/sm-cli](https://www.npmjs.com/package/@mudita/sm-cli) is used to store and share the environment variables between developers.
+The library provides a friendly CLI interface which helps developers to send their variables to [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) and protect them from unauthorised access from outside.
+
+### Installation
+To start using `sm-cli` you should install the module globally via:
+```bash
+$ npm install -g @mudita/sm-cli
+```
+
+### Usage
+
+```bash
+$ sm-cli COMMAND
+running command...
+$ sm-cli (-v|--version|version)
+@mudita/sm-cli/0.0.4 darwin-x64 node-v13.8.0
+$ sm-cli --help [COMMAND]
+USAGE
+  $ sm-cli COMMAND
+...
+```
+
+### Configure AWS CLI
+
+Make sure that you have configured [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) and your account have permission for retreving and writing data from AWS Secrets Manager:
+```json
+"secretsmanager:UntagResource",
+"secretsmanager:DescribeSecret",
+"secretsmanager:PutSecretValue",
+"secretsmanager:CreateSecret",
+"secretsmanager:DeleteSecret",
+"secretsmanager:CancelRotateSecret",
+"secretsmanager:ListSecretVersionIds",
+"secretsmanager:UpdateSecret",
+"secretsmanager:GetResourcePolicy",
+"secretsmanager:GetSecretValue",
+"secretsmanager:RestoreSecret",
+"secretsmanager:RotateSecret",
+"secretsmanager:UpdateSecretVersionStage",
+"secretsmanager:TagResource"
+"secretsmanager:ListSecrets"
+```
+
+### Simple usage
+
+1. On AWS Secrets Manager dashboard click on `Store new secrets` to create new secrets.
+2. Select `Other type of secrets (e.g. API key)` type in the list of availiable options
+3. Provide secrets name
+4. In project root directory run next command
+```bash
+$ sm-cli init
+  Enter project name: your_project_name
+```
+it should create `.secretsrc` file in root directory
+
+5. Patse you variables to `.env` file and run
+```bash
+$ sm-cli sync
+```
+This command will synchronise your local env with secrets manager storage.
+
+### Read more
+[@mudita/sm-cli](https://www.npmjs.com/package/@mudita/sm-cli)

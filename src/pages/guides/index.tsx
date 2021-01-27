@@ -42,6 +42,13 @@ const GuidePage: AppFunctionComponent = () => {
             }
             link={"/guides/okr"}
           />
+          <Box
+            title={"Libraries"}
+            description={
+              "Learn how we install and configure external libraries to improve our job."
+            }
+            link={"/guides/libraries"}
+          />
         </BoxGrid>
       </Content>
     </Layout>
